@@ -9,20 +9,20 @@ import {
 } from '../../constants';
 import "./style.scss";
 
-export interface TodoAppProps extends RouteComponentProps<any> {
+export interface AppProps extends RouteComponentProps<any> {
   /** MobX Stores will be injected via @inject() **/
   // [STORE_ROUTER]: RouterStore;
   // [STOURE_TODO]: TodoStore;
 }
 
 export interface AppState {
-  // filter: TodoFilter;
+  time: string;
 }
 
 @inject(STORE_APP)
 @observer
-export class App extends React.Component<TodoAppProps, AppState> {
-  constructor(props: TodoAppProps, context: any) {
+export class App extends React.Component<AppProps, AppState> {
+  constructor(props: AppProps, context: any) {
     super(props, context);
   }
         
@@ -30,6 +30,7 @@ export class App extends React.Component<TodoAppProps, AppState> {
     return (
       <div className="normal">
         <Header />
+          <p>{this.props[STORE_APP].time}</p>
           {this.props.children}
         <Footer />
         
