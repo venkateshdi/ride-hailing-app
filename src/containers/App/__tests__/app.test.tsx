@@ -1,7 +1,11 @@
-jest.mock('../../../components/Header', () => {
+// One way to mock component
+jest.mock('../../../components/Header');
+
+// Another way to mock component
+jest.mock('../../../components/Footer', () => {
   return {
-    Header: () => {
-    const React = require('react');
+    Footer: () => {
+      const React = require('react');
       return (
         <div />
       )
@@ -27,7 +31,7 @@ describe('AppContainer', () => {
     });
   });
 
-  test('Link changes the class when hovered', () => {
+  test('Component is rendered properly', () => {
     const component = renderer.create(
       <App {...store}/>
     );

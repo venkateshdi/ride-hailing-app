@@ -1,15 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`AppContainer Component is rendered properly 1`] = `
+<div
+  className="normal"
+>
+  <p />
+  <div />
+</div>
+`;
+
 exports[`AppContainer Link changes the class when hovered 1`] = `
 <div
   className="normal"
 >
-  <div />
   <p />
-  <footer>
-    <span>
-      Footer
-    </span>
-  </footer>
+  <div />
 </div>
 `;
