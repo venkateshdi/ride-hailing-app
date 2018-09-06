@@ -8,12 +8,3 @@ exports[`AppContainer Component is rendered properly 1`] = `
   <div />
 </div>
 `;
-
-exports[`AppContainer Link changes the class when hovered 1`] = `
-<div
-  className="normal"
->
-  <p />
-  <div />
-</div>
-`;
